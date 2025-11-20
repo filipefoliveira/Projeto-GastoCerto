@@ -21,7 +21,6 @@ h3 {
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #ffffff;
 }
 
 p {
@@ -292,6 +291,7 @@ th.alinhadoDir {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
+    color: #ffffff;
 }
 
 .dicas iframe {
