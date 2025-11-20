@@ -343,3 +343,109 @@ th.alinhadoDir {
     text-align: center;
     text-shadow: 1px 1px 5px #000000;
 }
+
+
+/* === MEDIA QUERY PARA TELAS MENORES (CELULAR) === */
+
+@media (max-width: 768px) {
+    /* * O breakpoint de 768px é comum para cobrir a maioria dos tablets 
+    * em modo retrato e todos os celulares.
+    */
+
+    /* --- GERAL --- */
+    /* Ajusta o padding do conteúdo principal (main) para não ficar muito largo nas bordas */
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    /* --- CABEÇALHO/NAVEGAÇÃO --- */
+    
+    .cabecalho {
+        /* Reduz a altura do cabeçalho */
+        height: auto; 
+        /* Altera para empilhar os elementos verticalmente em telas pequenas */
+        flex-direction: column; 
+        padding: 15px 10px;
+    }
+
+    .logoTopo {
+        /* Centraliza ou ajusta a margem do logo no topo */
+        margin-left: 0;
+        margin-bottom: 15px; /* Adiciona espaço abaixo do logo */
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        /* Garante que o menu ocupe toda a largura disponível */
+        width: 100%;
+        /* Altera o layout dos itens de navegação para empilhá-los */
+        flex-direction: column; 
+        margin-right: 0;
+    }
+
+    #listaNavegacao li {
+        /* Faz cada item de menu ocupar 100% da largura do nav */
+        width: 100%;
+        margin: 5px 0; /* Ajusta as margens verticais */
+    }
+
+    /* --- CALCULADORA (CARDS) --- */
+
+    .calculadora {
+        justify-content: center; /* Centraliza os cards ao quebrar */
+        gap: 10px; /* Reduz o espaçamento */
+    }
+
+    .card {
+        /* Define a largura mínima para garantir que quebrem, mas ocupem bem o espaço */
+        min-width: 100%; /* Faz com que cada card ocupe a largura total disponível */
+        padding: 10px;
+    }
+
+    /* --- FORMULÁRIOS --- */
+    .corpoForm {
+        /* Adiciona espaço para melhor toque */
+        gap: 10px;
+    }
+
+    #formTransacoes button {
+        /* Faz o botão de envio ter mais largura e ser mais fácil de clicar */
+        max-width: 90%; 
+    }
+
+    /* --- TABELAS --- */
+
+    /* Usa o padrão de rolagem horizontal para evitar que a tabela quebre o layout */
+    .tabela-container { 
+        overflow-x: auto;
+        width: 100%;
+    }
+    
+    table {
+        /* Garante que a tabela não será esmagada, mas rolará horizontalmente se necessário */
+        min-width: 600px; 
+    }
+
+    th, td {
+        padding: 8px; /* Reduz o padding da célula */
+        font-size: 0.9em; /* Reduz o tamanho da fonte */
+    }
+
+    /* --- PÁGINA DE DICAS --- */
+
+    .dicas iframe {
+        /* Ajusta o iframe do vídeo para ser responsivo (proporção 16:9) */
+        width: 100%; 
+        height: auto;
+        aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
+    }
+    
+    /* --- PÁGINA SOBRE --- */
+    #sobre img {
+        /* Torna a imagem de celular responsiva, limitando sua altura para caber na tela */
+        width: auto;
+        max-width: 80%;
+        height: auto;
+    }
+}
